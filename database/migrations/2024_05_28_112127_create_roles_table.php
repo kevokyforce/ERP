@@ -45,7 +45,7 @@ return new class extends Migration
         DB::table('users')->insert([
             'first_name' => 'Super',
             'last_name' => 'Admin',
-            'email' => 'admin@gmail.com',
+            'email' => (env('DEFAULT_EMAIL')),
             'password' => Hash::make(env('DEFAULT_PASSWORD')),
             'role_id' => '1',
         ]);
