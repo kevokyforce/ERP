@@ -77,6 +77,22 @@ class User extends Authenticatable
 
     public function getIsAdminAttribute()
     {
-        // 
+        return $this->role->id === 1 || $this->role->id === 2;
+    }
+    public function getIsSuperAttribute()
+    {
+        return $this->role->id === 1;
+    }
+    public function getIsEmployeeAttribute()
+    {
+        return $this->role->id === 5; 
+    }
+    public function getIsClientAttribute()
+    {
+        return $this->role->id === 3;
+    }
+    public function getIsSupplierAttribute()
+    {
+        return $this->role->id === 4;
     }
 }
