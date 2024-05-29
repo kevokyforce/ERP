@@ -14,30 +14,35 @@ return new class extends Migration
     {
         Schema::create('designations', function (Blueprint $table) {
             $table->id();
-            $table->foreignID('title')->unique();
+            $table->string('title')->unique();
             $table->string('slug')->nullable();
             $table->timestamps();
         });
 
-        DB::table('desgnations')->insert([
+        DB::table('designations')->insert([
             [
-                'title' => 'Accountant'
-            ],
-
-            [
-                'title' => 'Manager'
+                'title' => 'Accountant',
+                'slug' => 'accountant'
             ],
             [
-                'title' => 'Human Resource'
+                'title' => 'Manager',
+                'slug' => 'manager'
             ],
             [
-                'title' => 'Marketing'
+                'title' => 'Human Resource',
+                'slug' => 'human-resource'
             ],
             [
-                'title' => 'Store Control'
+                'title' => 'Marketing',
+                'slug' => 'marketing'
             ],
             [
-                'title' => 'Security'
+                'title' => 'Store Control',
+                'slug' => 'store-control'
+            ],
+            [
+                'title' => 'Security',
+                'slug' => 'security'
             ],
         ]);
     }
