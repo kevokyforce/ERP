@@ -11,9 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('clients', function (Blueprint $table) {
+        Schema::create('client_details', function (Blueprint $table) {
             $table->id();
             $table->foreignID('user_id');
+            $table->string('phone_number');
+            $table->string('address')->nullable();
+            $table->enum('membership_status', ['VIP', 'Active', 'Limited', 'Suspended'])->default('Limited');
             $table->timestamps();
         });
     }
@@ -23,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('clients');
+        Schema::dropIfExists('client_details');
     }
 };

@@ -1,6 +1,6 @@
 <div class="header">
     <div class="header-left">
-        <a href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')" class="logo"> 
+        <a href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')" class="logo"> 
             <img src="{{ asset('assets/img/logo.jpg') }}" width="50" height="70" alt="logo"> 
             <span class="logoclass">HOTEL
             </span>

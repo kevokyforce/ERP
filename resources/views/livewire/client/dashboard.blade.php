@@ -1,3 +1,3 @@
 <div>
-    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
+    <h3>This is the Client Dashboard</h3>
 </div>

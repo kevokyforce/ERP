@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Client;
+use App\Livewire\Admin\Dashboard;
 use Illuminate\Support\Facades\Route;
 
 
@@ -29,11 +31,9 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 });
 
     //  Admin Routes
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', ])->prefix('admin')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('admin.dashboard');
-});
+    Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', ])->prefix('admin')->group(function () {
+        Route::get('/dashboard', Dashboard::class)->name('admin.dashboard');
+    });
 
 
     //  Employee Routes

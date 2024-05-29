@@ -2,7 +2,7 @@
     <div id="sidebar-menu" class="sidebar-menu">
         <ul>
             <li class="active"> 
-                <x-responsive-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('admin.dashboard')">
+                <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 <i class="fas fa-tachometer-alt"></i> 
                 <span>Dashboard</span>
             </x-responsive-nav-link> 

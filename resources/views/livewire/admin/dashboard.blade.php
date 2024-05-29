@@ -1,3 +1,5 @@
-<div>
-    {{-- The whole world belongs to you. --}}
-</div>
+<x-app-layout>
+   
+    <x-welcome />
+      
+</x-app-layout>

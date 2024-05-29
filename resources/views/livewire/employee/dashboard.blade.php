@@ -1,3 +1,3 @@
 <div>
-    {{-- The whole world belongs to you. --}}
+    <h3>This is the Employee Dashboard</h3>
 </div>
